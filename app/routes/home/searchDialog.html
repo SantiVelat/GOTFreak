@@ -10,9 +10,22 @@
 </head>
 
 <body>
+
+<style>
+
+#search-character-box{
+  min-height:120px;
+}
+
+
+</style>
+
+
     <div class="container-fluid" style="max-height: 500px">
         
-            <div class="col-lg-6 col-lg-offset-3" style="margin-top:50px; position:200px">
+      <div class='buscador' style='position:absolute; top:50px;'>  
+        <div class='row'>
+            <div class="col-lg-6 col-lg-offset-3" style="margin-top:50px; top:140px">
                 <div class="input-group" id="search-character-box">
                     <input ng-model='charCtrl.query' type="text" class="form-control" placeholder="Search for a character">
                     <span class="input-group-btn">
@@ -20,7 +33,9 @@
       </span>
                 </div>
             </div>
-        
+        </div>
+        </div>
+
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
