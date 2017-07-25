@@ -1,4 +1,3 @@
-
 app.controller('searchCharacterController',['searchService', function(searchService) {
             var self = this;
 
