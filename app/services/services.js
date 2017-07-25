@@ -16,8 +16,8 @@ app.service('searchService', function($http) {
         var capitalizedQuery = capitalizeWords(query);
         //console.log(capitalizedQuery);
         if (!self.characters) {
-            var url = 'characters.json';
-            //var url = 'https://api.got.show/api/characters/';
+            //var url = 'characters.json';
+            var url = 'https://api.got.show/api/characters/';
             $http.get(url)
                 .then(function(response) {
                     self.characters = response.data;
