@@ -6,7 +6,6 @@ app.controller('searchCharacterController',['searchService', function(searchServ
                 searchService.searchCharacter(self.query, function(charactersFound) {
                     self.found = charactersFound;
                     console.log(self.found);
-                    //self.name = character.name;
                 });
             }
         }]);

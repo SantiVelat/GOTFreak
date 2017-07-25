@@ -1,6 +1,15 @@
 app.service('searchService', function($http) {
     var self = this;
-
+    self.inicialization=function(){
+        var url = 'https://api.got.show/api/characters/';
+            $http.get(url)
+                .then(function(response) {
+                    self.characters = response.data;
+                }, function(response) {
+                    onError(response);
+                });
+    }
+    self.inicialization();
 
     function filter(query) {
         return self.characters.filter(function(character) {
@@ -12,25 +21,9 @@ app.service('searchService', function($http) {
 
     self.searchCharacter = function(query, callback, onError) {
         console.log('Services search Character called');
-        //var sluggedQuery = query.split(' ').join('_');
         var capitalizedQuery = capitalizeWords(query);
-        //console.log(capitalizedQuery);
-        if (!self.characters) {
-            //var url = 'characters.json';
-            var url = 'https://api.got.show/api/characters/';
-            $http.get(url)
-                .then(function(response) {
-                    self.characters = response.data;
-                    obtainArrayOfCharacters(capitalizedQuery);
-                    callback(self.searchedCharacters);
-                }, function(response) {
-                    onError(response);
-                });
-        } else {
-            obtainArrayOfCharacters(capitalizedQuery);
-            callback(self.searchedCharacters);
-        };
-        
+        obtainArrayOfCharacters(capitalizedQuery);
+        callback(self.searchedCharacters);
     };
 
 
