@@ -1,1 +1,1 @@
-var app = angular.module('GOTFreak',[['ngRoute']]);
+var app = angular.module('GOTFreak',['ngRoute']);

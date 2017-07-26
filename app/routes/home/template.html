@@ -1,37 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Search box</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-    <style>
-    #search-character-group {
-
-        min-height: 120px;
-        position: absolute;
-        top: 150px;
-    }
-
-    img {
-        _width: auto;
-        _height: 900px;
-        _max-height: 900px;
-    }
-
-    input {
-        height: 50px;
-    }
-    </style>
-    <div class="container-fluid" style="max-height: 500px">
-        <div class='buscador'>
-            <div class='row'>
-                <div class="col-lg-6 col-lg-offset-3" id="search-character-group" top:140px ">
+<div class="container-fluid">
+    <div class='buscador' ng-controller="searchCharacterController as charCtrl">
+        <div class='row'>
+            <div class="col-lg-6 col-lg-offset-3" id="search-character-group" top:140px ">
                 <div class="input-group ">
                     <input ng-model='charCtrl.query' type="text " class="form-control " placeholder="Search for a character ">
                     <span class="input-group-btn ">
@@ -41,9 +11,9 @@
             </div>
         </div>
         </div>
-
+ 
         <div id="myCarousel " class="carousel slide " data-ride="carousel ">
-            <!-- Indicators -->
+            Indicators
             <ol class="carousel-indicators ">
                 <li data-target="#myCarousel " data-slide-to="0 " class="active "></li>
                 <li data-target="#myCarousel " data-slide-to="1 "></li>
@@ -54,7 +24,7 @@
                 <li data-target="#myCarousel " data-slide-to="6 "></li>
                 <li data-target="#myCarousel " data-slide-to="7 "></li>
             </ol>
-            <!-- Wrapper for slides -->
+            Wrapper for slides
             <div class="carousel-inner ">
                 <div class="item active ">
                     <img  src='http://www.mundocerveza.com/wp-content/uploads/2017/04/Games-1.jpg' id="img1 " alt="GOT Freak1 ">
@@ -81,7 +51,7 @@
                     <img src='https://cdn.vox-cdn.com/uploads/chorus_asset/file/3762464/the-wall-castle-black-game-of-thrones.jpg' alt="GOT Freak8 ">
                 </div>
             </div>
-            <!-- Left and right controls -->
+            Left and right controls
             <a class="left carousel-control " href="#myCarousel " data-slide="prev ">
     <span class="glyphicon glyphicon-chevron-left "></span>
     <span class="sr-only ">Previous</span>
@@ -90,9 +60,17 @@
     <span class="glyphicon glyphicon-chevron-right "></span>
     <span class="sr-only ">Next</span>
   </a>
+        </div> 
+
+</div>
+   <div class="results " ng-controller="ShowResultsController">
+        <div class="row ">
+            <div class="col-xs-2 test " ng-repeat="character in found">
+                <img class="cards " src="http://via.placeholder.com/150x150"> <!-- src="img/mapa-got.jpg " -->
+                <span class="name ">{{character.name}}</span>
+                <a ng-href="#!/{{character._id}}" class="btn btn-danger" >Go to details</a>
+            </div>
         </div>
-    </div>
-    <div class="container ">
     </div>
 </body>
 

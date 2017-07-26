@@ -1,9 +1,9 @@
-angular.module('GOTFreak',[]);
+angular.module('GOTFreak')
    .config( function( $routeProvider ) {
 
     $routeProvider
       .when('/', {
-        templateUrl: '';      
-    	})
+        templateUrl: '/app/routes/home/template.html',
+      })
 
   })
