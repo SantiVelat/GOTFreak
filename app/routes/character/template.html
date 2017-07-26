@@ -1,2 +1,27 @@
-<h1>{{ ctrl.character.name }}</h1>
-<p>{{ ctrl.character._id }}</p>
+
+
+<div class="container">
+	<div class="row">
+	<div class="col-lg-5">
+		<img src=" {{'https://api.got.show' + ctrl.character.imageLink}}">
+	</div>
+
+	<div class="col-lg-7">
+		<ul>
+		<li>Name: <h1>{{ ctrl.character.name }}</h1></li>
+		<li>House:<h1>{{ctrl.character.house}}</h1></li>
+		<li>Culture: <h1>{{ctrl.character.culture}}</h1></li>
+		<li>
+		Titles:
+			<ul>
+				<li ng-repeat="title in ctrl.character.titles">{{title}}</li>
+			</ul>	
+		</li>
+		</ul>
+
+</div>
+</div>
+
+
+
+

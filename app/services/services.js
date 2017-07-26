@@ -20,8 +20,8 @@ app.service('DataService', function($http) {
         callback(filteredCharacters);
     };
 
-    self.getDetailsCharacter = function( idCharacter ) {
-        var url = 'https://api.got.show/api/characters/byId/' + idCharacter;
+    self.getDetailsCharacter = function( slugCharacter ) {
+        var url = 'https://api.got.show/api/characters/bySlug/' + slugCharacter;
         return $http.get(url)
     }
 
