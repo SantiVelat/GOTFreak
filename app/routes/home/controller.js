@@ -9,13 +9,23 @@ app.controller('searchCharacterController', function($rootScope ) {
 
 
  app.controller('ShowResultsController', function($scope, $routeParams, searchService) {
- 	$scope.$on('onSearchReady', function(e, data) {
+ 	var self = this;
+    $scope.$on('onSearchReady', function(e, data) {
  		console.log(data)
- 		var self = this;
  		searchService.searchCharacter(data.character, function(charactersFound) {
-                    $scope.found = charactersFound;
-                    console.log($scope.found);
+                    self.found = charactersFound;
+                    console.log(self.found);
                 });
  	})
+
+    /*self.filter=funtion(characterImg){
+        var imgDefault='img/defaultImg.jpg';
+        if(characterImg){
+            return characterImg;
+        }
+        else{
+            return imgDefault;
+        }
+    }*/
  	
   })

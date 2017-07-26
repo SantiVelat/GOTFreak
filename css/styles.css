@@ -10,29 +10,34 @@
     input {
         height: 50px;
     }
-    {
-            width: 250px;
-            max-width: 250px;
-            border: 1px solid black;
-            padding-top:1%;
-            padding-bottom:1%;
-            margin:1.5%;
-            background-color:black;
-            color:white;
-            border-radius: 4%;
+    .search-results {
+      margin-top: 20px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .thumbnail {
+      width: 250px;
+      background-color: black;
+    }
+    .characInfo{
+        display:block;
+        text-align: center;
+    }
+    .characName{
+        color: white;
+        font-size: 130%;
+        display:block;
+        text-align: center;
+    }
+    .thumbnail img {
+      height: 300px;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+    button.btn.btn-danger{
+    color: black !important;
+    }
 
-        }
-        .cards{
-            max-width: 100%;
-        }
-        .name{
-            display:block;
-            text-align: center;
-            font-size: 130%;
-            margin-top: 2%;
-            margin-bottom:2%;
-        }
-        .results{
-            text-align:center;
-            margin-top:5%;
-        }

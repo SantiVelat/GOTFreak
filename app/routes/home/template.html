@@ -63,12 +63,13 @@
         </div> 
 
 </div>
-   <div class="results " ng-controller="ShowResultsController">
-        <div class="row ">
-            <div class="col-xs-2 test " ng-repeat="character in found">
-                <img class="cards " src="http://via.placeholder.com/150x150"> <!-- src="img/mapa-got.jpg " -->
-                <span class="name ">{{character.name}}</span>
-                <a ng-href="#!/{{character._id}}" class="btn btn-danger" >Go to details</a>
+   <div class="search-results" ng-controller="ShowResultsController as show">
+
+        <div class="thumbnail" ng-repeat="character in show.found">
+            <img ng-style="{'background-image':'url(https://api.got.show{{ character.imageLink }})'}">
+            <div class="caption characInfo">
+                <span class="characName">{{character.name}}</span>
+                <a ng-href="#!/{{character._id}}"><button  class="btn btn-danger">See details</button></a>
             </div>
         </div>
     </div>
