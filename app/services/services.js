@@ -1,48 +1,29 @@
-app.service('searchService', function($http) {
-    var self = this;
-    self.inicialization=function(){
-        var url = 'https://api.got.show/api/characters/';
-            $http.get(url)
-                .then(function(response) {
-                    self.characters = response.data;
-                })
-                .catch(function(){
-                    alert('Conexion error')
-                });
-    }
-    self.inicialization();
+app.service('DataService', function($http) {
 
-    function filter(query) {
-        return self.characters.filter(function(character) {
-            if (character.name.indexOf(query) !== -1) {
-                return character;
-            };
-        });
-    };
+    var self = this;
+
+    var url = 'https://api.got.show/api/characters/';
+
+    // Get Characters at the beginning
+    $http.get(url)
+        .then(function(response) {
+            self.characters = response.data;
+            console.log(self.characters);
+        })
+        .catch(function(){ alert('Conexion error') });
 
     self.searchCharacter = function(query, callback) {
-        console.log('Services search Character called');
-        var capitalizedQuery = capitalizeWords(query);
-        obtainArrayOfCharacters(capitalizedQuery);
-        callback(self.searchedCharacters);
+
+        var filteredCharacters = self.characters.filter( function( character ) {
+            return character.name.toLowerCase().includes( query.toLowerCase() )
+        })
+        callback(filteredCharacters);
     };
 
-
-    function obtainArrayOfCharacters(lookedValue) {
-        self.searchedCharacters=[];
-        for (var i = 0; i < self.characters.length; i++) {
-            //console.log('for Entered');
-            var character = self.characters[i];
-            if (character.name.indexOf(lookedValue) !== -1) {
-                //console.log(character)
-                self.searchedCharacters.push(character);
-            }
-        };
-        //console.log(self.searchedCharacters);
-    };
-
-    function capitalizeWords(str) {
-        return str.replace(/\w\S*/g, function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    self.getDetailsCharacter = function( idCharacter ) {
+        var url = 'https://api.got.show/api/characters/byId/' + idCharacter;
+        return $http.get(url)
     }
+
 
 });

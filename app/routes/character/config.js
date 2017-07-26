@@ -2,9 +2,10 @@ angular.module('GOTFreak')
    .config( function( $routeProvider ) {
 
     $routeProvider
-      .when('/:id', {
+      .when('/character/:id', {
         templateUrl: 'app/routes/character/template.html',
-        controller: 'characterController'
+        controller: 'characterController',
+        controllerAs: 'ctrl'
       })
 
   })

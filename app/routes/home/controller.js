@@ -8,14 +8,16 @@ app.controller('searchCharacterController', function($rootScope ) {
         });
 
 
- app.controller('ShowResultsController', function($scope, $routeParams, searchService) {
+ app.controller('ShowResultsController', function($scope, $routeParams, DataService) {
  	var self = this;
+    $scope.imgNotFound = 'http://vignette2.wikia.nocookie.net/pandorahearts/images/a/ad/Not_available.jpg/revision/latest?cb=20141028171337'
+
     $scope.$on('onSearchReady', function(e, data) {
  		console.log(data)
- 		searchService.searchCharacter(data.character, function(charactersFound) {
-                    self.found = charactersFound;
-                    console.log(self.found);
-                });
+ 		DataService.searchCharacter(data.character, function(charactersFound) {
+            self.found = charactersFound;
+            console.log(self.found);
+        });
  	})
 
     /*self.filter=funtion(characterImg){
@@ -27,5 +29,5 @@ app.controller('searchCharacterController', function($rootScope ) {
             return imgDefault;
         }
     }*/
- 	
+
   })
