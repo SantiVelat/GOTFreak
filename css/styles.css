@@ -1,15 +1,28 @@
     #search-character-group {
 
-        min-height: 120px;
-        position: absolute;
-        top: 150px;
+        _min-height: 120px;
+        _position: absolute;
+        _top: 150px;
     }
     #search-box{
-        background:transparent;
+        opacity:0.7;        
     }
+    
     input {
         height: 50px;
     }
+
+    .jumbotron{
+        background-image: url("../img/Game-of-Thrones logo.jpg");
+        background-position: center;
+        background-size:cover;
+        height: 300px;
+    }
+
+
+
+
+
     {
             width: 250px;
             max-width: 250px;
