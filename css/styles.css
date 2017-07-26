@@ -1,44 +1,28 @@
-
 .divheader{
 
     width: 100%;
     height:120px;
     font-family: 'MedievalSharp', cursive; 
     background-color: black;
-  
 }
-
 h1{
 
       font-family: 'MedievalSharp', cursive;
-      font-size: 100px;  
-
- 
+      font-size: 100px;   
 }
-
-
 .sentence {
-
     padding-left: 30px; 
 }
-
 .search {
-
     float:right;
 }
-
 .divinputhouse{
-
     background-image: "../imagenes/casas.1.jpg"
 }
-
 input{
-
     margin-top: 20%;
 }
-
 h1 {
-
     margin-top: 0;
     padding-top: 0;
 }

@@ -5,8 +5,9 @@ app.service('searchService', function($http) {
             $http.get(url)
                 .then(function(response) {
                     self.characters = response.data;
-                }, function(response) {
-                    onError(response);
+                })
+                .catch(function(){
+                    alert('Conexion error')
                 });
     }
     self.inicialization();
@@ -19,7 +20,7 @@ app.service('searchService', function($http) {
         });
     };
 
-    self.searchCharacter = function(query, callback, onError) {
+    self.searchCharacter = function(query, callback) {
         console.log('Services search Character called');
         var capitalizedQuery = capitalizeWords(query);
         obtainArrayOfCharacters(capitalizedQuery);

@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body >
-    <div ng-controller="searchCharacterController as charCtrl" class='container'>
+<body ng-controller="searchCharacterController as charCtrl">
+    <div class='container'>
         <div class='row'>
             <div class="col-lg-6 col-lg-offset-3">
                 <div class="input-group">
@@ -21,20 +21,28 @@
                 </div>
             </div>
         </div>
-        <div class='container'>
+    </div>
+    <ng-view></ng-view>
+       <!--- <div class='container'>
             <div class='col-lg-6 col-lg-offset-3'>
                 <ul>
                     <li ng-repeat="charac in charCtrl.found"><a ng-href="#">{{charac.name}}</a> / <a ng-href="#">{{charac.house}}</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </div>-->
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+
+    <!--Module-->
+    <script src="app/app.js"></script>
+    <!--Services-->
+    <script src="app/services/services.js"></script>
+    <!--Home-->
+    <script src="app/controllers/charactersController.js"></script>
+    <script src="app/routes/home/config.js"></script>
+    <!--Bootstrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/services/services.js"></script>
-    <script src="app/controllers/charactersController.js"></script>
 </body>
 
 </html>
