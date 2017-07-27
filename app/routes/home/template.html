@@ -5,8 +5,9 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="search-results" ng-controller="ShowResultsController as show">
+<div class="container" ng-controller="ShowResultsController as show">
+    <span class="searchTitle" ng-show="show.found"><h1>CHARACTERS "{{ show.query }}" FOUND</h1></span>
+    <div class="search-results">
         <div class="thumbnail" ng-repeat="character in show.found">
             <img ng-style="{'background-image':'url({{ character.imageLink ? 'https://api.got.show' + character.imageLink : show.imgNotFound }})'}">
             <div class="caption characInfo">
