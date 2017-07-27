@@ -3,7 +3,8 @@
 app.service('DataService', function ($http) {
   var self = this
 
-  var url = 'https://got-api-proxy.herokuapp.com/characters/'
+  var url = 'https://api.got.show/api/characters/'
+  // var url = 'https://got-api-proxy.herokuapp.com/characters/'
 
     // Get Characters at the beginning
   $http.get(url)
@@ -20,13 +21,9 @@ app.service('DataService', function ($http) {
     callback(filteredCharacters)
   }
 
-  self.getDetailsCharacter = function (slugCharacter, callback) {
-    var selectedCharacter = self.characters.filter(function (character) {
-      return character.slug === slugCharacter
-    })
-    callback(selectedCharacter[0])
-    // var url = 'https://got-api-proxy.herokuapp.com/characters/bySlug/' + slugCharacter
-    // return $http.get(url)
+  self.getDetailsCharacter = function (slugCharacter) {
+    var url = 'https://got-api-proxy.herokuapp.com/characters/bySlug/' + slugCharacter
+    return $http.get(url)
   }
 
   self.getHouseEmblem = function (houseName) {
