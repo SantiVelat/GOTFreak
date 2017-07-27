@@ -16,6 +16,7 @@ app.controller('searchCharacterController', function($rootScope ) {
  		console.log(data)
  		DataService.searchCharacter(data.character, function(charactersFound) {
             self.found = charactersFound;
+            self.query=data.character;
             console.log(self.found);
         });
  	})

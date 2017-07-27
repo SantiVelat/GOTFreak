@@ -26,7 +26,7 @@
     .thumbnail {
       width: 250px;
       background-color: black;
-      border-color:red;
+      border-color:#CC0E04;
     }
     .characInfo{
         display:block;
@@ -78,6 +78,17 @@
   font-size: 260%;
   color:#E1BD11;
   font-weight: 900;
+}
+
+.searchTitle{
+    display:block;
+  text-align:center;
+}
+.searchTitle  h1{
+  font-size: 260%;
+  color:#FCF6B6;
+  font-weight: 900;
+  text-shadow: -2px -2px 1px #C47700, 2px 2px 1px #C47700, -2px 2px 1px #C47700, 2px -2px 1px #C47700;
 }
 .detailsPage{
   margin-top:2%;
