@@ -16,6 +16,9 @@
 				<li ng-repeat="title in ctrl.character.titles">{{title}}</li>
 			</ul>	
 		 </p>
+		 <div class="emblem">
+		 	<img class="houseEmblem" ng-src="{{ ctrl.emblem ? 'https://api.got.show' + ctrl.emblem : show.imgNotFound }}">
+		 </div>
 </div>
 </div>
 

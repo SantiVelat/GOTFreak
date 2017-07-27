@@ -6,7 +6,11 @@ app.controller('characterController', function($routeParams, DataService) {
   DataService.getDetailsCharacter(slugCharacter)
     .then( function( response ) {
       self.character = response.data.data
-      console.log(self.character);
+      DataService.getHouseEmblem(self.character.house)
+      	.then( function( responseTwo ){
+      		self.emblem=responseTwo.data.data.imageLink;
+      		console.log(self.emblem);
+      	})
     })
 
 })

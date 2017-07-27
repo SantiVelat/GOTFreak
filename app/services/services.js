@@ -25,5 +25,9 @@ app.service('DataService', function($http) {
         return $http.get(url)
     }
 
+    self.getHouseEmblem = function( houseName ) {
+        var url = 'https://api.got.show/api/houses/' + houseName;
+        return $http.get(url)
+    }
 
 });
