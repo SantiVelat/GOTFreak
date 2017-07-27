@@ -6,6 +6,6 @@ angular.module('GOTFreak')
       .when('/character/:slug', {
         templateUrl: 'app/routes/character/template.html',
         controller: 'characterController',
-        controllerAs: 'ctrl'
+        controllerAs: 'vm'
       })
    })

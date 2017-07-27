@@ -4,10 +4,11 @@
 	<span class="title"><h1>CHARACTER DETAILS</h1></span>
 	<div class="row details">
 		<div class="col-lg-3 imgContainer">
-			<img class="characterImg" ng-src="{{ ctrl.character.imageLink ? 'https://api.got.show' + ctrl.character.imageLink : show.imgNotFound }}">
+			<p style="color: white">{{ vm.image }}</p>
+			<img class="characterImg" ng-style="{'background-image':'url({{ vm.image }})'}">
 		</div>
 
-		<div class="col-lg-5 text-left description">
+		<!-- <div class="col-lg-5 text-left description">
 		 <p>Name: <span>{{ ctrl.character.name }}</span><br>
 			House:<span>{{ctrl.character.house}}</span><br>
 		    Culture: <span>{{ctrl.character.culture}}</span><br>
@@ -26,10 +27,10 @@
 				     Overlord:<span>{{ctrl.emblem.overlord}}</span>
 				</p>
 			</div>
-		 </div>
+		 </div> -->
 	</div>
 </div>
 
 
-
+<!--<img class="characterImg" ng-src="{{ ctrl.character.imageLink ? 'https://api.got.show' + ctrl.character.imageLink : show.imgNotFound }}">-->
 
