@@ -3,11 +3,11 @@
 <div class="container detailsPage text-center">
 	<span class="title"><h1>CHARACTER DETAILS</h1></span>
 	<div class="row details">
-		<div class="col-lg-5 imgContainer">
+		<div class="col-lg-3 imgContainer">
 			<img class="characterImg" ng-src="{{ ctrl.character.imageLink ? 'https://api.got.show' + ctrl.character.imageLink : show.imgNotFound }}">
 		</div>
 
-		<div class="col-lg-7 text-left description">
+		<div class="col-lg-5 text-left description">
 		 <p>Name: <span>{{ ctrl.character.name }}</span><br>
 			House:<span>{{ctrl.character.house}}</span><br>
 		    Culture: <span>{{ctrl.character.culture}}</span><br>
@@ -16,10 +16,18 @@
 				<li ng-repeat="title in ctrl.character.titles">{{title}}</li>
 			</ul>	
 		 </p>
-		 <div class="emblem">
-		 	<img class="houseEmblem" ng-src="{{ ctrl.emblem ? 'https://api.got.show' + ctrl.emblem : show.imgNotFound }}">
 		 </div>
-</div>
+		 <div class="house col-lg-offset-1 col-lg-3">
+		 	<div class="houseBox">
+			 	<img class="houseEmblem" ng-src="{{ ctrl.emblem.imageLink ? 'https://api.got.show' + ctrl.emblem.imageLink : show.imgNotFound }}">
+				<p>
+					 <span>{{ ctrl.emblem.name }}</span><br><br>
+					 Region: <span>{{ctrl.emblem.region}}</span><br>
+				     Overlord:<span>{{ctrl.emblem.overlord}}</span>
+				</p>
+			</div>
+		 </div>
+	</div>
 </div>
 
 

@@ -43,7 +43,7 @@
       width: 100%;
       background-size: cover;
       background-position: center center;
-      border-color:black;
+      border:1px solid black !important;
     }
     button.btn.btn-danger{
     color: black !important;
@@ -104,6 +104,7 @@
   border: 2px solid #FFD673;
   height:400px;
   max-width: 100%;
+  width:100%;
 }
 .description{
   color:white;
@@ -115,4 +116,15 @@
 p > span{
   font-size:120%;
   padding-left: 2%;
+}
+.house{
+  background-color: #515151;
+  border-radius:3%;
+  color:white;}
+.houseBox > img{
+  width:60%;
+  text-align:center;
+}
+.houseBox{
+
 }
