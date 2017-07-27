@@ -8,7 +8,7 @@
 <div class="container">
     <div class="search-results" ng-controller="ShowResultsController as show">
         <div class="thumbnail" ng-repeat="character in show.found">
-            <img ng-style="{'background-image':'url({{ character.imageLink ? 'https://api.got.show' + character.imageLink : imgNotFound }})'}">
+            <img ng-style="{'background-image':'url({{ character.imageLink ? 'https://api.got.show' + character.imageLink : show.imgNotFound }})'}">
             <div class="caption characInfo">
                 <span class="characName">{{character.name}}</span>
                 <a ng-href="#!/character/{{character.slug}}">
