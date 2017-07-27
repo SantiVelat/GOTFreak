@@ -4,64 +4,76 @@
         _position: absolute;
         _top: 150px;
     }
+
     input {
         height: 50px;
     }
+
     .search-results {
-      margin-top: 20px;
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    
-    body{
-      background-color: #1f1f1f;
+
+    body {
+        background-color: #1f1f1f;
     }
 
     .thumbnail {
-      width: 250px;
-      background-color: black;
+        width: 250px;
+        background-color: black;
     }
-    .characInfo{
-        display:block;
+
+    .characInfo {
+        display: block;
         text-align: center;
     }
-    .characName{
+
+    .characName {
         color: white;
         font-size: 130%;
-        display:block;
+        display: block;
         text-align: center;
     }
+
     .thumbnail img {
-      height: 300px;
-      width: 100%;
-      background-size: cover;
-      background-position: center center;
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
     }
-    button.btn.btn-danger{
-    color: black !important;
+
+    button.btn.btn-danger {
+        color: black !important;
     }
-    #header{
-        background-color:#0a0a0a;
+
+    #header {
+        background-color: #0a0a0a;
         height: 60px;
     }
 
-.logo-link, .logo-link:hover {
-    color: white
-}
+    .logo-link,
+    .logo-link:hover {
+        color: white
+    }
 
-.logo-link:hover {
-    text-decoration: underline;
-}
+    .logo-link:hover {
+        text-decoration: underline;
+    }
 
-.search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../img/Game-of-Thrones logo.jpg");
-    background-position: center;
-    background-size:cover;
-    height: 150px;
-    padding: 50px;
-}
+    .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/Game-of-Thrones logo.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        padding: 50px;
+    }
+
+    .characters-body{
+      margin-top:15px;
+    }
