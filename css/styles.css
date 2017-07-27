@@ -52,9 +52,11 @@
     #header{
         background-color:#0a0a0a;
         height: 60px;
+        padding-top:1.5%;
     }
 
 .logo-link, .logo-link:hover {
+    font-size:130%;
     color: white;
      font-weight: 900;
 }
@@ -63,11 +65,12 @@
     text-decoration: underline;
 }
 
+
 .search-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/Game-of-Thrones logo.jpg");
+    background-image: url("../img/banner-flags.jpg");
     background-position: center;
     background-size:cover;
     height: 150px;
