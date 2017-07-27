@@ -22,12 +22,14 @@ app.service('DataService', function ($http) {
   }
 
   self.getDetailsCharacter = function (slugCharacter) {
-    var url = 'https://got-api-proxy.herokuapp.com/characters/bySlug/' + slugCharacter
+    var url = 'https://api.got.show/api/characters/bySlug/' + slugCharacter
+    /* var url = 'https://got-api-proxy.herokuapp.com/characters/bySlug/' + slugCharacter */
     return $http.get(url)
   }
 
   self.getHouseEmblem = function (houseName) {
-    var url = 'https://got-api-proxy.herokuapp.com/houses/' + houseName
+    var url = 'https://api.got.show/api/houses/' + houseName
+    /* var url = 'https://got-api-proxy.herokuapp.com/houses/' + houseName */
     return $http.get(url)
   }
 })
