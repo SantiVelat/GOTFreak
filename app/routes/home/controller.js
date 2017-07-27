@@ -10,7 +10,7 @@ app.controller('searchCharacterController', function($rootScope ) {
 
  app.controller('ShowResultsController', function($scope, $routeParams, DataService) {
  	var self = this;
-    $scope.imgNotFound = 'http://vignette2.wikia.nocookie.net/pandorahearts/images/a/ad/Not_available.jpg/revision/latest?cb=20141028171337'
+    self.imgNotFound = 'http://vignette2.wikia.nocookie.net/pandorahearts/images/a/ad/Not_available.jpg/revision/latest?cb=20141028171337'
 
     $scope.$on('onSearchReady', function(e, data) {
  		console.log(data)
@@ -19,15 +19,4 @@ app.controller('searchCharacterController', function($rootScope ) {
             console.log(self.found);
         });
  	})
-
-    /*self.filter=funtion(characterImg){
-        var imgDefault='img/defaultImg.jpg';
-        if(characterImg){
-            return characterImg;
-        }
-        else{
-            return imgDefault;
-        }
-    }*/
-
   })

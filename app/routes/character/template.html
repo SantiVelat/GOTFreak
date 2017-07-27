@@ -1,24 +1,21 @@
 
 
-<div class="container characters-body">
-	<div class="row">
-	<div class="col-lg-5 text-center">
-		<img src=" {{'https://api.got.show' + ctrl.character.imageLink}}">
-	</div>
+<div class="container detailsPage text-center">
+	<span class="title"><h1>CHARACTER DETAILS</h1></span>
+	<div class="row details">
+		<div class="col-lg-5 imgContainer">
+			<img class="characterImg" ng-src="{{ ctrl.character.imageLink ? 'https://api.got.show' + ctrl.character.imageLink : show.imgNotFound }}">
+		</div>
 
-	<div class="col-lg-7">
-		<ul>
-		<li>Name: <h1>{{ ctrl.character.name }}</h1></li>
-		<li>House:<h1>{{ctrl.character.house}}</h1></li>
-		<li>Culture: <h1>{{ctrl.character.culture}}</h1></li>
-		<li>
-		Titles:
+		<div class="col-lg-7 text-left description">
+		 <p>Name: <span>{{ ctrl.character.name }}</span><br>
+			House:<span>{{ctrl.character.house}}</span><br>
+		    Culture: <span>{{ctrl.character.culture}}</span><br>
+			Titles:
 			<ul>
 				<li ng-repeat="title in ctrl.character.titles">{{title}}</li>
 			</ul>	
-		</li>
-		</ul>
-
+		 </p>
 </div>
 </div>
 
