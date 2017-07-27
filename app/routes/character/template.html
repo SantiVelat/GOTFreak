@@ -4,33 +4,32 @@
 	<span class="title"><h1>CHARACTER DETAILS</h1></span>
 	<div class="row details">
 		<div class="col-lg-3 imgContainer">
-			<p style="color: white">{{ vm.image }}</p>
-			<img class="characterImg" ng-style="{'background-image':'url({{ vm.image }})'}">
+			<img class="characterImg" ng-style="{'background-image':'url('+ vm.image +')'}">
 		</div>
 
-		<!-- <div class="col-lg-5 text-left description">
-		 <p>Name: <span>{{ ctrl.character.name }}</span><br>
-			House:<span>{{ctrl.character.house}}</span><br>
-		    Culture: <span>{{ctrl.character.culture}}</span><br>
+		<div class="col-lg-5 text-left description">
+		 <p>Name: <span>{{ vm.character.name }}</span><br>
+			House:<span>{{vm.character.house}}</span><br>
+		    Culture: <span>{{vm.character.culture}}</span><br>
 			Titles:
 			<ul>
-				<li ng-repeat="title in ctrl.character.titles">{{title}}</li>
+				<li ng-repeat="title in vm.character.titles">{{title}}</li>
 			</ul>	
 		 </p>
 		 </div>
 		 <div class="house col-lg-offset-1 col-lg-3">
 		 	<div class="houseBox">
-			 	<img class="houseEmblem" ng-src="{{ ctrl.emblem.imageLink ? 'https://api.got.show' + ctrl.emblem.imageLink : show.imgNotFound }}">
+			 	<img class="houseEmblem" ng-src="{{ vm.emblem.imageLink ? 'https://api.got.show' + vm.emblem.imageLink : show.imgNotFound }}">
 				<p>
-					 <span>{{ ctrl.emblem.name }}</span><br><br>
-					 Region: <span>{{ctrl.emblem.region}}</span><br>
-				     Overlord:<span>{{ctrl.emblem.overlord}}</span>
+					 <span>{{ vm.emblem.name }}</span><br><br>
+					 Region: <span>{{vm.emblem.region}}</span><br>
+				     Overlord:<span>{{vm.emblem.overlord}}</span>
 				</p>
 			</div>
-		 </div> -->
+		 </div> 
 	</div>
 </div>
 
 
-<!--<img class="characterImg" ng-src="{{ ctrl.character.imageLink ? 'https://api.got.show' + ctrl.character.imageLink : show.imgNotFound }}">-->
+<!--<img class="characterImg" ng-src="{{ vm.character.imageLink ? 'https://api.got.show' + vm.character.imageLink : show.imgNotFound }}">-->
 

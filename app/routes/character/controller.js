@@ -1,8 +1,10 @@
-/* global app */
+ /* global app */
 
 app.controller('characterController', function ($routeParams, DataService) {
   var self = this
   var slugCharacter = $routeParams.slug
+
+  console.log('characterController...')
   DataService.getDetailsCharacter(slugCharacter)
     .then(function (response) {
       self.character = response.data.data
