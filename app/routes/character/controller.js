@@ -8,7 +8,7 @@ app.controller('characterController', function ($routeParams, DataService) {
       self.character = response.data.data
       DataService.getHouseEmblem(self.character.house)
         .then(function (responseTwo) {
-          self.emblem = responseTwo.data.data.imageLink
+          self.emblem = responseTwo.data.data
           console.log(self.emblem)
         })
     })
