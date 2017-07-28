@@ -1,25 +1,10 @@
-<div class="search-form" ng-controller="searchCharacterController as charCtrl">
-    <div class="input-group">
-        <input ng-model='charCtrl.query' type="text " class="form-control input-lg" id="search-box" placeholder="Search for a character ">
-        <span class="input-group-btn "> <button ng-click='charCtrl.searchChar()' class="input-lg btn btn-default " type="button "><i class="glyphicon glyphicon-search "></i></button> </span>
-    </div>
-</div>
-
-<div class="container" ng-controller="ShowResultsController as show">
-    <span class="searchTitle" ng-show="show.found"><h1>CHARACTERS "{{ show.query }}" FOUND</h1></span>
-    <div class="search-results">
-        <div class="thumbnail" ng-repeat="character in show.found">
-            <img ng-style="{'background-image':'url(' + show.getImageCharacter(character.imageLink) + ')'}">
-            <div class="caption characInfo">
-                <span class="characName">{{character.name}}</span>
-                <a ng-href="#!/character/{{character.slug}}">
-                    <button class="btn btn-danger">See details</button>
-                </a>
-            </div>
+    <div ng-controller="homeController as home">
+        <div class="homeBackground" >
+        </div>
+        <div class="input-group seeker">
+                <input ng-model='home.query' type="text " class="form-control" placeholder="Search for a character...">
+                <span class="seekerButton input-group-addon">
+                <a ng-href="#!/search/{{home.query}}">
+                <button class="btn btn-default " type="button "><i class="glyphicon glyphicon-search "></i></button></a></span>
         </div>
     </div>
-
-</div>
-</body>
-
-</html>

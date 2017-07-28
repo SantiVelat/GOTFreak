@@ -132,5 +132,43 @@ p > span{
   text-align:center;
   padding-top: 5%;
 }
+        footer{
+            font-size:80%;
+            padding-right: 6%;
+            padding-left: 6%;
+            padding-top:1%;
+            padding-bottom:1%;
+            background-color: black;
+            position:fixed;
+            bottom: 0px;
+            display: flex;   
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width:100vw;
+        }
+        footer > a:link, footer > a, footer > a:hover{
+          text-decoration:none;
+          color:white;
+        }
 
-
+.homeBackground{
+            background-image: url("../img/defuaultImg.jpg");
+            opacity:0.5;
+            background-size:cover;
+            width:100vw;
+            height: 85vh;
+        }
+        .seeker{
+            color; white;
+            position:absolute;
+            left:36%;
+            top:50%;
+            max-width: 30%
+        }
+        .seeker >button{
+            float:right;
+        }
+        .seekerButton{
+            padding:0px;
+            border:0px;
+        }
