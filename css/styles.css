@@ -184,3 +184,7 @@ p > span{
           text-shadow: -1px -1px 1px #DC0A0A, 1px 1px 1px #DC0A0A, -1px 1px 1px #DC0A0A, 1px -1px 1px #DC0A0A;
           color:#EDD36A;
         }
+        .logo-nav{
+          max-height: 100%;
+          position:relative;
+        }
