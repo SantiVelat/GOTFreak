@@ -1,11 +1,11 @@
-<div class="search-form" ng-controller="searchCharacterController as charCtrl">
+<form class="search-form" ng-submit="vm.searchCharacter()" ng-controller="SearchFormController as vm">
     <div class="input-group">
-        <input ng-model='charCtrl.query' type="text " class="form-control input-lg" id="search-box" placeholder="Search for a character ">
-        <span class="input-group-btn "> <button ng-click='charCtrl.searchChar()' class="input-lg btn btn-default " type="button "><i class="glyphicon glyphicon-search "></i></button> </span>
+        <input ng-model='show.query' type="text " class="form-control input-lg" id="search-box" placeholder="Search for a character ">
+        <span class="input-group-btn "> <button class="input-lg btn btn-default " type="button "><i class="glyphicon glyphicon-search "></i></button> </span>
     </div>
-</div>
+</form>
 
-<div class="container" ng-controller="ShowResultsController as show">
+<div class="container">
     <span class="searchTitle" ng-show="show.found"><h1>CHARACTERS "{{ show.query }}" FOUND</h1></span>
     <div class="search-results">
         <div class="thumbnail" ng-repeat="character in show.found">

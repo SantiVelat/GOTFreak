@@ -1,10 +1,1 @@
-    <div ng-controller="homeController as home">
-        <div class="homeBackground" >
-        </div>
-        <div class="input-group seeker">
-                <input ng-model='home.query' type="text " class="form-control" placeholder="Search for a character...">
-                <span class="seekerButton input-group-addon">
-                <a ng-href="#!/search/{{home.query}}">
-                <button class="btn btn-default " type="button "><i class="glyphicon glyphicon-search "></i></button></a></span>
-        </div>
-    </div>
+<div ng-include="'/templates/searchForm.html'"></div>

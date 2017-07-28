@@ -3,6 +3,8 @@ angular.module('GOTFreak')
    .config(function ($routeProvider) {
      $routeProvider
       .when('/search/:query', {
-        templateUrl: 'app/routes/search/template.html'
+        templateUrl: 'app/routes/search/template.html',
+        controller: 'searchCharacterController',
+        controllerAs: 'show',
       })
    })

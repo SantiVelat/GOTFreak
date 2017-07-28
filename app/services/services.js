@@ -1,35 +1,49 @@
-/* global app */
-/* global alert */
-app.service('DataService', function ($http) {
-  var self = this
+/* global app, alert */
+(function() {
 
-  var url = 'https://api.got.show/api/characters/'
-  // var url = 'https://got-api-proxy.herokuapp.com/characters/'
+  //var url = 'https://api.got.show/api/characters/'
+  var urlBase = 'https://got-api-proxy.herokuapp.com/'
 
-    // Get Characters at the beginning
-  $http.get(url)
-        .then(function (response) {
-          self.characters = response.data
-          console.log(self.characters)
-        })
-        .catch(function () { alert('Conexion error') })
+  var app = angular.module('GOTFreak')
+  app.service('DataService', function ($http) {
 
-  self.searchCharacter = function (query, callback) {
-    var filteredCharacters = self.characters.filter(function (character) {
-      return character.name.toLowerCase().includes(query.toLowerCase())
-    })
-    callback(filteredCharacters)
-  }
+    var self = this
 
-  self.getDetailsCharacter = function (slugCharacter) {
-    var url = 'https://api.got.show/api/characters/bySlug/' + slugCharacter
-    /* var url = 'https://got-api-proxy.herokuapp.com/characters/bySlug/' + slugCharacter */
-    return $http.get(url)
-  }
+    self.searchCharacters = searchCharacters
+    self.getDetailsCharacter = getDetailsCharacter
+    self.getHouseEmblem = getHouseEmblem
 
-  self.getHouseEmblem = function (houseName) {
-    var url = 'https://api.got.show/api/houses/' + houseName
-    /* var url = 'https://got-api-proxy.herokuapp.com/houses/' + houseName */
-    return $http.get(url)
-  }
-})
+    function searchCharacters( queryCharacter ) {
+
+      var url = urlBase + 'characters/'
+
+      function filterCharacterByQuery(character) {
+        return character.name.toLowerCase().includes(queryCharacter.toLowerCase())
+      }
+
+      return $http.get(url)
+                .then(function ( response ) {
+                  return response.data
+                })
+                .then(function ( aAllCharacters ) {
+                  return aAllCharacters.filter(filterCharacterByQuery)
+                })
+                .catch(function (error) {
+                  console.log("Error from searchCharacters...");
+                  console.log(error);
+                })
+
+    }
+
+    function getDetailsCharacter(slugCharacter) {
+      var url = urlBase + 'characters/bySlug/' + slugCharacter
+      return $http.get(url)
+    }
+
+    function getHouseEmblem (houseName) {
+      var url = urlBase + 'houses/' + houseName
+      return $http.get(url)
+    }
+  })
+
+})()
