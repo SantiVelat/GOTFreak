@@ -172,3 +172,15 @@ p > span{
             padding:0px;
             border:0px;
         }
+        .btn-back{
+          color:#DC0A0A;
+          font-size: 350%;
+          float:left;
+          cursor:pointer; 
+          cursor: hand;
+          text-shadow: -1px -1px 1px #EDD36A, 1px 1px 1px #EDD36A, -1px 1px 1px #EDD36A, 1px -1px 1px #EDD36A;
+        }
+        .btn-back:hover{
+          text-shadow: -1px -1px 1px #DC0A0A, 1px 1px 1px #DC0A0A, -1px 1px 1px #DC0A0A, 1px -1px 1px #DC0A0A;
+          color:#EDD36A;
+        }
