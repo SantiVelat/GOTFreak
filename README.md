@@ -20,15 +20,15 @@ We made this excercise at the 4th Week of the Skylab Coders Academy at the end o
 
 ##### Home screenshot: 
 
-![Screenshot](img/screenshots/screenshot_home.png)
+![Screenshot](img/screenshots/screenshot_home_.png)
 
 ##### Search results screenshot:
 
-![Screenshot](img/screenshots/screenshot_search_results.png)
+![Screenshot](img/screenshots/screenshot_search_results_.png)
 
 ##### Character details:
 
-![Screenshot](img/screenshots/screenshot_character_details.png)
+![Screenshot](img/screenshots/screenshot_character_details_.png)
 
 ---
 
