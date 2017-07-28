@@ -5,6 +5,6 @@ angular.module('GOTFreak')
       .when('/search/:query', {
         templateUrl: 'app/routes/search/template.html',
         controller: 'searchCharacterController',
-        controllerAs: 'show',
+        controllerAs: 'show'
       })
    })
