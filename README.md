@@ -49,7 +49,7 @@ We use the following dependencies to make this webpage possible:
 ## API
 This application uses the API endpoints made public thanks to the work of 
 
- jhis application relies on  external API services for geolocalitzation and events information:
+ jhis application relies on  external API services for game of thrones characters and houses information:
 
 * [API ENDPOINTS AND DOCUMENTATION](https://api.got.show/doc/)
 * [WEB PAGE](https://got.show/)
