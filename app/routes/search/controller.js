@@ -2,12 +2,12 @@
 app.controller('searchCharacterController', function ($rootScope, $routeParams) {
   var self = this
   console.log('ok')
-  self.query = $routeParams.characterQuery
+  self.query = $routeParams.query
   self.searchChar = function () {
     console.log('Controller search function called')
     $rootScope.$broadcast('onSearchReady', {character: self.query})
   }
-  searchChar()
+  self.searchChar()
 })
 
 app.controller('ShowResultsController', function ($scope, $routeParams, DataService) {
