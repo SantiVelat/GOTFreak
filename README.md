@@ -8,9 +8,11 @@
 
 ### Description
 
-GOTFreak is a site to search information related to all the characters from the Games of Thrones world. The user can search for a name and obtain all the characters with that name.
+GOTFreak is a site to search for information related to all the characters from the Games of Thrones world. The user can search for a name and obtain all the characters with that name.
 For each character selected it will show some extra information like his House, the coat of arms and the culture it belongs.
 This is possible thanks to the API made available at: (https://api.got.show/doc/).
+
+We made this excercise at the 4th Week of the Skylab Coders Academy at the end of July 2017.
 
 ---
 
@@ -18,50 +20,43 @@ This is possible thanks to the API made available at: (https://api.got.show/doc/
 
 ##### Home screenshot: 
 
-![Screenshot](img/home.png)
+![Screenshot](img/screenshots/screenshot_home.jpg)
 
 ##### Search results screenshot:
 
-![Screenshot](img/search.png)
+![Screenshot](img/screenshots/screenshot_search_results.jpg)
 
-##### Card Event Info:
+##### Character details:
 
-![Screenshot](img/eventCard.png)
+![Screenshot](img/screenshots/screenshot_character_details.jpg)
 
 ---
-
-### Getting Started
-
-This is a set of directives and services for AngularJS `1.6.3`
 
 ### Dependencies
 
-The following dependencies where use to make the Web application
+We use the following dependencies to make this webpage possible:
 
-- `AngularJS 1.6.3`
+- `AngularJS 1.6.4`
 
 - `AngularJS route 1.6.3`
 
-- `ngMap | AngularJS directives for google maps`
+- `Bootstrap`
+
+- `jQuery (as a dependency for Bootstrap)`
 
 ---
 
-### Google Maps API
-To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=#key), then you need to add it into the your index.html file in a script tag.
-(Reference line 91 from index.html you add **?key=<%GOOGLE-API%>**, where you need to replace **_<%GOOGLE-API%>_** with your Api-key )
-
-
-
 ## API
-This application relies on external API services for geolocalitzation and events information:
+This application uses the API endpoints made public thanks to the work of 
 
-* [Ticket Master](http://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
-* [FreeGeoIp](https://freegeoip.net)
+ jhis application relies on  external API services for geolocalitzation and events information:
+
+* [API ENDPOINTS AND DOCUMENTATION](https://api.got.show/doc/)
+* [WEB PAGE](https://got.show/)
 
 ---
 
 ## Authors
 
-- [Catalina Buades](https://github.com/catabuades)
-- [Humberto Acea](https://github.com/KV-Disco)
-- [Joan Albert Segura](https://github.com/jalbertsr)
+- [Santi Velat](https://github.com/SantiVelat)
+- [Hernán de Soto](https://github.com/hdesoto)
